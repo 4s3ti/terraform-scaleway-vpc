@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/4s3ti/scaleway-vpc.svg?branch=master)](https://travis-ci.com/4s3ti/scaleway-vpc)
-# Terraform Scaleway Kapsule
+# Terraform Scaleway VPC
 
 A Terraform module to create a vpc network on scaleway.
 
