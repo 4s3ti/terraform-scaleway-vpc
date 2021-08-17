@@ -1,4 +1,4 @@
-variable "vpc_name" { 
+variable "vpc_name" {
   description = "The VPC Name"
 }
 
@@ -8,7 +8,7 @@ variable "tags" {
   default     = null
 }
 
-variable "vpc_zone" { 
+variable "vpc_zone" {
   description = "The zone in which the private network should be created"
   default     = null
 }
