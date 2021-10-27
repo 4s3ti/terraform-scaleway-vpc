@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/4s3ti/scaleway-vpc.svg?branch=master)](https://travis-ci.com/4s3ti/scaleway-vpc)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 # Terraform Scaleway VPC
 
 A Terraform module to create a vpc network on scaleway.
