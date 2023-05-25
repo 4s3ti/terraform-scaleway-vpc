@@ -4,40 +4,56 @@
 
 A Terraform module to create a vpc network on scaleway.
 
-## Module Requirements
-
-* terraform > 0.13
-* Scaleway account
-
-
 ## How to use
 
 Examples directory contains examples on how to use this module and add nodes to it.  
 
-## File and directory structure
 
-|     Directory / file      |         Content                             |
-----------------------------|---------------------------------------------|
-| examples/terraform        | Contains Terraform example usage            |
-| examples/terragrunt       | Contains Terragrunt example usage           |
-| README.md                 | This file!                                  |
-| main.tf                   | Main terraform with deployment code         |
-| variables.tf              | Terraform variables file                    |
-| versions.tf               | Required providers and versions             |
+<!-- BEGIN_TF_DOCS -->
+## Requirements
 
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_scaleway"></a> [scaleway](#requirement\_scaleway) | ~>2.1.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_scaleway"></a> [scaleway](#provider\_scaleway) | ~>2.1.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [scaleway_vpc_private_network.scw-vpc](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/vpc_private_network) | resource |
 
 ## Inputs
 
-| Input name                         |          | Default value | Accepted Values | Description                                                         |
-|------------------------------------|----------|---------------|-----------------|---------------------------------------------------------------------|
-| vpc_name                           | Required |               | string          | The VPC Name                                                        |
-| tags                               | Optional |               | List of strings | List of tags to be applied to the cluster                           |
-| vpc_zone                           | Optional |               | Read Docs*      | The zone in which the private network should be created             |
-| project_id                         | Optional |               | Read Docs*      | The ID of the project the private network is associated with        |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_tags"></a> [tags](#input\_tags) | List of tags to be applied to the cluster | `list(string)` | `null` | no |
+| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | The VPC Name | `string` | n/a | yes |
+| <a name="input_vpc_zone"></a> [vpc\_zone](#input\_vpc\_zone) | The zone in which the private network should be created | `string` | `null` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_organization_id"></a> [organization\_id](#output\_organization\_id) | The organization ID the private network is associated with |
+| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the private network |
+<!-- END_TF_DOCS -->
 
 
-## External Documentation
+# Contributions
 
-*Please Refer to this documentation to find more about what values are accepted in this module arguments, as they can change due to provider updates.
+Improvements and suggestions are always welcome, feel free to open an Issue or Pull Request
 
-https://registry.terraform.io/providers/scaleway/scaleway/latest/docs/resources/k8s_pool
+If you like this theme and want to support / contribute in a different way you can always: 
+
+<a href="https://www.buymeacoffee.com/4s3ti" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" >

@@ -1,19 +1,16 @@
 variable "vpc_name" {
+  type        = string
   description = "The VPC Name"
 }
 
 variable "tags" {
-  description = "List of tags to be applied to the cluster"
   type        = list(string)
+  description = "List of tags to be applied to the cluster"
   default     = null
 }
 
 variable "vpc_zone" {
+  type        = string
   description = "The zone in which the private network should be created"
-  default     = null
-}
-
-variable "project_id" {
-  description = "The ID of the project the private network is associated with"
   default     = null
 }
